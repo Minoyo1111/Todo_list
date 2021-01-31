@@ -1,0 +1,22 @@
+<h2>TodoList 列表</h2>
+<%= link_to "新增待辦事項", new_task_path %>
+<table>
+  <thead>
+    <tr>
+      <td>任務名稱</td>
+      <td>任務描述</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |t| %>
+    <tr>
+      <td><%= t.title %></td>
+      <td><%= t.description %></td>
+      <td><%= link_to "編輯", edit_task_path(t) %></td>
+      <td><%= link_to "刪除", task_path(t), method: "delete", data:{ confirm: "確認刪除" } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
