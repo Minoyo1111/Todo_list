@@ -1,24 +1,12 @@
-# README
+# Todo_List練習
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+這個專案主要練習基本 Rails 架構功能，讓我對於操作 Rails 網路開發加深印象
 
-Things you may want to cover:
+專案練習包括：
 
-* Ruby version
+* 建立 ER 圖
+* 基本任務新增修改刪除
+* 有使用者登入登出系統
+* 能夠排序
+* 能有任務狀態
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
