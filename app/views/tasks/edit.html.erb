@@ -1,0 +1,10 @@
+<h2>編輯待辦事項</h2>
+<%= form_for(@task) do |f|  %>
+  <%= f.label :title, "任務名稱" %>
+  <%= f.text_field :title %>
+  <%= f.label :description, "任務描述" %>
+  <%= f.text_field :description %>
+  <%= f.submit "編輯" %>
+<% end %>
+
+<%= link_to "任務列表", tasks_path  %>
