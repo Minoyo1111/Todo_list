@@ -26,8 +26,12 @@ RSpec.describe TasksController, type: :controller do
   end
 
   describe "#create" do 
-  
+    before(:all) do 
+      @task_params = {title: "title", description: "description"}
+    end
+
+    it "creates record" do 
+      expect{ post :create, params:{ task: @task_params} }.to change{Task.all.size}.by(1)
+    end
   end
-
-
 end
