@@ -33,5 +33,12 @@ RSpec.describe TasksController, type: :controller do
     it "creates record" do 
       expect{ post :create, params:{ task: @task_params} }.to change{Task.all.size}.by(1)
     end
+    it "redirect_to success" do
+      post :create, params:{ task: @task_params}
+      expect(response).not_to have_http_status(200)
+      expect(response).to have_http_status(302)
+      expect(response).to redirect_to(tasks_path)
+    end
+
   end
 end
