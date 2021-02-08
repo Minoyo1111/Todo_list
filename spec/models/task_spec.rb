@@ -18,11 +18,4 @@ RSpec.describe Task, type: :model do
     expect(task.abstract).to include("12345678912345678900")
     expect(task.abstract).not_to include("yaya")
   end
-
-  # it "belongs_to user" do
-  #   User = User.create(name: "name", email: "email")
-  #   task = Task.create(title: "title", user_id: "user_id")
-  #   expect(user.tasks).to include(task)
-  # end
-
 end
