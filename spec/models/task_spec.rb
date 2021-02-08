@@ -18,5 +18,4 @@ RSpec.describe Task, type: :model do
     expect(task.abstract).to include("12345678912345678900")
     expect(task.abstract).not_to include("yaya")
   end
-
 end
