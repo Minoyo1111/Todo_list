@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(id: params[:id])
+    @task = Task.find(params[:id])
   end 
 
   def new
@@ -12,7 +12,7 @@ class TasksController < ApplicationController
   end 
 
   def create
-    @task = Task.new(tasks_params)
+    @task = Task.new(task_params)
     if @task.save
       redirect_to tasks_path, notice: "資料新增成功！"
     else 
@@ -21,12 +21,12 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(id: params[:id])
+    @task = Task.find(params[:id])
   end
 
   def update
-    @task = Task.find(id: params[:id])
-    if @task.update(tasks_params)
+    @task = Task.find(params[:id])
+    if @task.update(task_params)
       redirect_to tasks_path, notice: "資料更新成功"
     else
       render :edit
@@ -34,13 +34,13 @@ class TasksController < ApplicationController
   end 
 
   def destroy
-    @task = Task.find(id: params[:id])
+    @task = Task.find(params[:id])
     @task.destroy if @task
     redirect_to tasks_path, notice: "資料已刪除"
   end
 
   private
-    def tasks_params
+    def task_params
       params.require(:task).permit(:title, :description)
     end
 end
