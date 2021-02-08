@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-  belongs_to :user
+  # belongs_to :user
   validates :title, presence: true
 
   def self.no_description
