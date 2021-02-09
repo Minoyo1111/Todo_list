@@ -1,13 +1,11 @@
 language: ruby
 rvm:
  - 2.7.0
- - 2.7.1
 install: bundle install
 
 services:
   - postgresql
 
 script:
-    - rails db:create RAILS_ENV=test
-    - rails db:migrate RAILS_ENV=test
-    - rspec spec/controllers
+  - bundle exec rake db:migrate:reset RAILS_ENV=test
+  - bundle exec rspec
