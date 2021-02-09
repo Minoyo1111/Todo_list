@@ -8,5 +8,5 @@ services:
 
 script:
   - bundle exec rake db:migrate:reset RAILS_ENV=test
-  - rake webpacker:compile
+  - bin/rails assets:precompile
   - bundle exec rspec
