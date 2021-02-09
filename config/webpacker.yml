@@ -47,8 +47,6 @@ default: &default
     - .gif
     - .jpeg
     - .jpg
-build:
-    <<: *default
 
 development:
   <<: *default
