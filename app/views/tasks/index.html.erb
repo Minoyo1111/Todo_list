@@ -15,7 +15,7 @@
       <td><%= link_to(t.title, task_path(t)) %></td>
       <td><%= t.description %></td>
       <td><%= link_to "編輯", edit_task_path(t) %></td>
-      <td><%= link_to "刪除", task_path(t), method: "delete", data:{ confirm: "確認刪除" } %></td>
+      <td><%= link_to "delete", task_path(t), method: "delete", data:{ confirm: "確認刪除" } %></td>
     </tr>
     <% end %>
   </tbody>
