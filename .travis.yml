@@ -1,13 +1,15 @@
 language: ruby
 rvm:
  - 2.7.0
-install: bundle install
+install:
+  - bundle install
+  - nvm install 10
+  - npm i -g yarn
+  - yarn 
 
 services:
   - postgresql
 
 script:
   - bundle exec rake db:migrate:reset RAILS_ENV=test
-  - yarn install --check-files
-  - RAILS_ENV=test bundle exec rails webpacker:compile
   - bundle exec rspec
