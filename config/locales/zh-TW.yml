@@ -1,12 +1,13 @@
 zh-TW:
     tasks:
+        task_list: 任務清單
         new: 新增任務
         check: 任務確認
         edit: 編輯任務
         delete: 刪除任務
         home: 任務清單
-        detail: 任務明細
+        task_detail: 任務明細
         task_title: 任務名稱
         content: 任務內容
-        start_time: Start Time
-        end_time: End Time
+        start_time: 開始時間
+        end_time: 結束時間
