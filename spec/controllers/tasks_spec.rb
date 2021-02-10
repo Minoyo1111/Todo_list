@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe TasksController, type: :controller do
   before(:all) do 
-      @task_1 = Task.create(title: "title_1", description: "description_1")
+      @task_1 = FactoryBot.create(:task)
       @task_2 = Task.create(title: "title_2", description: "description_2")
   end
   #類別方法就用#字號，如果是實體方法就.字號
