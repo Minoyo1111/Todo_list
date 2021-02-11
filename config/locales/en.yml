@@ -43,3 +43,6 @@ en:
     end_time: End Time
     task_update: update
     sure?: Delete？
+    delete_finish: Task deleted
+    update_finish: Task updated
+    create_success!: Added successfully

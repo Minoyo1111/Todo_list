@@ -12,3 +12,6 @@ zh-TW:
         end_time: 結束時間
         task_update: 任務更新
         sure?: 確定要刪除？
+        delete_finish: 任務已刪除
+        update_finish: 任務已更新
+        create_success!: 任務新增成功
