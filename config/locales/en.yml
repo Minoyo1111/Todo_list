@@ -32,13 +32,14 @@
 en:
   tasks:
     task_list: Task List
-    new: New Task
+    task_home: Back To Task List
+    task_new: New Task
     check: Task Check
     edit: Edit Task
     delete: Delete Task
-    home: Tasks
-    task_detail: Task Detail
+    task_description: Task Description
     task_title: Task Name
-    content: Task Content
     start_time: Start Time
     end_time: End Time
+    task_update: update
+    sure?: Delete？
