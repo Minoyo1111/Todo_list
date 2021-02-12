@@ -11,6 +11,8 @@
 
   <body>
     <%= render "shared/notice" if notice %>
+    <%= link_to "中文版", :locale => "zh-TW" %>
+    <%= link_to "English", :locale => "en" %> 
     <%= yield %>
   </body>
 </html>

@@ -1,5 +1,6 @@
 
-<h1>任務標題：<%= @task.title %></h1>
+<h1><%= t("tasks.task_title") %>：<%= @task.title %></h1>
+<p><%= t("tasks.task_description") %></p>
 <p><%= @task.description %></p>
 
-<%= link_to "任務列表", tasks_path %>
+<%= link_to t("tasks.task_home"), tasks_path  %>
