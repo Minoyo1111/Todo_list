@@ -11,6 +11,7 @@ RSpec.describe TasksController, type: :controller do
       get :index
       expect(response).to have_http_status(200)
       expect(response).to render_template(:index)
+      
   end
 
   it "#new" do
