@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "tasks", type: :request do
   before(:all) do
-    @task = Task.create(title: "task from require spec")
+    @task = FactoryBot.create(:task)
   end
   it "#index" do
     get tasks_path
@@ -24,5 +24,6 @@ RSpec.describe "tasks", type: :request do
     expect(response).to have_http_status(302)
     expect(Task.last.title).to eq(params[:title])
   end
+
 
 end
