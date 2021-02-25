@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :task do
-    title { "task from require spec" }
+    title { Faker::Name}
     description { Faker::Lorem.paragraph }
   end
 end

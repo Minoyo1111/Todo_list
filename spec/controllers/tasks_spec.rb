@@ -3,8 +3,8 @@ require 'rails_helper'
 
 RSpec.describe TasksController, type: :controller do
   before(:all) do 
-      @task_1 = Task.create(title: "title_1", description: "description_1")
-      @task_2 = Task.create(title: "title_2", description: "description_2")
+      @task_1 = FactoryBot.create(:task)
+      @task_2 = FactoryBot.create(:task)
   end
   #類別方法就用#字號，如果是實體方法就.字號
   it "#index" do
@@ -52,12 +52,12 @@ RSpec.describe TasksController, type: :controller do
 
   describe "#update" do 
     before(:all) do 
-       @task_params = {title: "title_3", description: "description"} 
+       @task_params = {title: "title", description: "description"}
     end
 
     it "changes record" do 
        post :update, params: {task: @task_params, id: @task_2[:id]}
-       expect(Task.find(@task_2[:id])[:title]).to eq("title_3")
+       expect(Task.find(@task_2[:id])[:title]).to eq("title")
     end
     it "redirect_to success" do
         post :update, params:{ task: @task_params, id: @task_2[:id]}
@@ -75,7 +75,7 @@ RSpec.describe TasksController, type: :controller do
 
   describe "#destroy" do
     before(:each) do
-      @task_3 = @task_2 || Task.create(title: "title_2", description: "description_2")
+      @task_3 = @task_2 || FactoryBot.create(:task)
     end
     it "destroy record" do
       expect{ delete :destroy, params:{ task: @task_params, id: @task_2[:id]} }.to change{Task.all.size}.by(-1)
