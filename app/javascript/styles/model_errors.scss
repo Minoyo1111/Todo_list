@@ -1,0 +1,13 @@
+.field_with_errors{
+  display: inline;
+  label{
+    color: red;
+  }
+  #task_title{
+    border: 1px red solid;
+  }
+}
+
+.massage_error{
+  color: red;
+}
