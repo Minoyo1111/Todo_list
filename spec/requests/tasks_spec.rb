@@ -1,20 +1,20 @@
 require "rails_helper"
 
 RSpec.describe "tasks", type: :request do
-  before(:all) do
+  before(:each) do
     @task = FactoryBot.create(:task)
   end
   it "#index" do
     get tasks_path
     expect(response).to have_http_status(200)
     expect(response).to render_template(:index)
-    expect(response.body).to include("task from require spec")
+    expect(response.body).to include("#{@task.title}")
   end
   it "#show" do
     get task_path(id: @task.id)
     expect(response).to have_http_status(200)
     expect(response).to render_template(:show)
-    expect(response.body).to include("task from require spec") 
+    expect(response.body).to include("#{@task.title}") 
   end
 
   it "#create" do
