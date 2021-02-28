@@ -14,7 +14,7 @@ RSpec.describe Task, type: :feature do
     it 'by "created_at" DESC' do
       #針對 table 這個標籤裡的東西進行測試
       within ('table') do
-        expect(page).to have_content(/["#{@tasks[2][:title]} + #{@tasks[1][:title]} + #{@tasks[0][:title]}"]/)
+        expect(page).to have_content(/#{@tasks[2][:title]}.+#{@tasks[1][:title]}.+#{@tasks[0][:title]}/)
       end
     end
   end
