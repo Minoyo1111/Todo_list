@@ -1,4 +1,9 @@
 <h2><%= t("tasks.task_new")%></h2>
+<% if @task.errors.any? %>
+ <% @task.errors.full_messages.each do |massage| %>
+  <div class="massage_error"><%= massage %></div>
+ <% end %>
+<% end %>
 <%= form_for(@task) do |f|  %>
   <%= f.label :title, t("tasks.task_title") %>
   <%= f.text_field :title %>

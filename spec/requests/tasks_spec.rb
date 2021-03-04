@@ -25,5 +25,4 @@ RSpec.describe "tasks", type: :request do
     expect(Task.last.title).to eq(params[:title])
   end
 
-
 end
