@@ -2,6 +2,7 @@
 
 require 'support/database_cleaner.rb'
 require 'spec_helper'
+# require 'support/factory_bot'
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
